@@ -1,0 +1,117 @@
+#include "stm32f10x.h"
+
+unsigned char symbol = 0;
+unsigned char symbols[100];
+int count = 0;
+
+volatile uint32_t msTicks;                                 // counts 1ms timeTicks
+/*----------------------------------------------------------------------------
+ * SysTick_Handler:
+ *----------------------------------------------------------------------------*/
+void SysTick_Handler(void) {
+  msTicks++;
+}
+
+void Delay (uint32_t dlyTicks) {
+  uint32_t curTicks;
+
+  curTicks = msTicks;
+  while ((msTicks - curTicks) < dlyTicks) { __NOP(); }
+}
+
+void SystemCoreClockConfigure(void) {
+		RCC->CR |= ((uint32_t)RCC_CR_HSEON);                    
+		while ((RCC->CR & RCC_CR_HSERDY) == 0);                  
+
+		RCC->CFGR = RCC_CFGR_SW_HSE;                             
+		while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_HSE);  
+	
+	  RCC->CFGR = RCC_CFGR_HPRE_DIV1;                          // HCLK = SYSCLK
+		RCC->CFGR |= RCC_CFGR_PPRE1_DIV1;                        // APB1 = HCLK/2
+		RCC->CFGR |= RCC_CFGR_PPRE2_DIV1;                        // APB2 = HCLK/2
+
+		RCC->CR &= ~RCC_CR_PLLON;                                
+
+		//  PLL configuration:  = HSE * 9 = 72 MHz
+		RCC->CFGR &= ~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLMULL);
+		RCC->CFGR |=  (RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9);
+
+		RCC->CR |= RCC_CR_PLLON;                                
+		while((RCC->CR & RCC_CR_PLLRDY) == 0) __NOP();           
+
+		RCC->CFGR &= ~RCC_CFGR_SW;                               
+		RCC->CFGR |=  RCC_CFGR_SW_PLL;
+		while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_PLL);  
+}
+
+void USART_Init () {
+	
+	RCC->APB1ENR |= RCC_APB1ENR_USART2EN; 
+	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN; 
+	
+	// CNF2 = 10, MODE2 = 01
+	GPIOA->CRL &= (~GPIO_CRL_CNF2_0); 
+	GPIOA->CRL |= (GPIO_CRL_CNF2_1 | GPIO_CRL_MODE2);
+
+	// CNF3 = 10, MODE3 = 00, ODR3 = 1
+	GPIOA->CRL &= (~GPIO_CRL_CNF3_0);
+	GPIOA->CRL |= GPIO_CRL_CNF3_1;
+	GPIOA->CRL &= (~(GPIO_CRL_MODE3));
+	GPIOA->BSRR |= GPIO_ODR_ODR3;
+
+	//USARTDIV = SystemCoreClock / (16 * BAUD) = 72000000 / (16 * 9600) = 468,75
+
+	USART2->BRR = 7500; 
+
+	USART2->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_UE ;
+	USART2->CR2 = 0;
+	USART2->CR3 = 0;
+
+}
+
+void USART_Send (unsigned char symbol) {
+		while ((USART2->SR & USART_SR_TXE) == 0) {}
+		USART2->DR = symbol;
+}
+
+void USART_Receive (unsigned char *data) {
+		 while ((USART2->SR & USART_SR_RXNE) == 0) {}
+		*data = (unsigned char)USART2->DR;
+		 symbols[count] = *data;
+		 count++;
+}
+void GPIO_Init (void) {
+
+  RCC->APB2ENR |= (1UL << 2);                /* Enable GPIOA clock            */
+
+  /* Configure LED (PA.5) pins as output */
+  GPIOA->CRL   &= ~((15ul << 4*5));
+  GPIOA->CRL   |=  (( 1ul << 4*5));
+}
+
+void LED_ON () {
+    GPIOA->BSRR = 1ul << 5;
+}
+
+void LED_OFF () {
+    GPIOA->BSRR = 1ul << 21;
+}
+
+int main () {
+	SystemCoreClockConfigure();
+	SystemCoreClockUpdate();
+	SysTick_Config(SystemCoreClock / 1000);                  // SysTick 1 msec interrupts
+	
+	GPIO_Init();
+	USART_Init();
+	
+	while (1) {
+			LED_OFF();
+			USART_Receive(&symbol);
+			USART_Send(symbol);
+			//LED_ON();
+			//Delay(100);
+	}
+	
+	return 0;
+}

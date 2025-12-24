@@ -1,0 +1,85 @@
+Dependencies for Project 'Kurs_work', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6180000::V6.18::ARMCLANG
+F (.\main.c)(0x69453C02)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103RB-I./RTE/_Target_1-ID:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/main.o -MD)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_Target_1\RTE_Components.h)(0x691D39B7)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdint.h)(0x6252A728)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (diod.h)(0x6943CB40)
+I (ds18b20.h)(0x693843FF)
+I (D:\Program\Keil\ARM\ARMCLANG\include\string.h)(0x6252A726)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdlib.h)(0x6252A726)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdio.h)(0x6252A726)
+F (.\diod.c)(0x694532A5)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103RB-I./RTE/_Target_1-ID:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/diod.o -MD)
+I (diod.h)(0x6943CB40)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_Target_1\RTE_Components.h)(0x691D39B7)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdint.h)(0x6252A728)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (ds18b20.h)(0x693843FF)
+I (D:\Program\Keil\ARM\ARMCLANG\include\string.h)(0x6252A726)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdlib.h)(0x6252A726)
+F (.\ds18b20.h)(0x693843FF)()
+F (.\ds18b20.c)(0x694165BC)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103RB-I./RTE/_Target_1-ID:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/ds18b20.o -MD)
+I (ds18b20.h)(0x693843FF)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_Target_1\RTE_Components.h)(0x691D39B7)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdint.h)(0x6252A728)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (D:\Program\Keil\ARM\ARMCLANG\include\string.h)(0x6252A726)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdlib.h)(0x6252A726)
+F (.\diod.h)(0x6943CB40)()
+F (D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/Buttons_NUCLEO_F103RB.c)(0x53F59230)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103RB-I./RTE/_Target_1-ID:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/buttons_nucleo_f103rb.o -MD)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_Target_1\RTE_Components.h)(0x691D39B7)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdint.h)(0x6252A728)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (D:\Program\Kail_Pacs\Keil\MDK-Middleware\7.15.0\Board\Board_Buttons.h)(0x5D14479A)
+F (D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c)(0x5ADD37CE)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103RB-I./RTE/_Target_1-ID:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/led_nucleo_f103rb.o -MD)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_Target_1\RTE_Components.h)(0x691D39B7)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdint.h)(0x6252A728)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (D:\Program\Kail_Pacs\Keil\MDK-Middleware\7.15.0\Board\Board_LED.h)(0x5D14479A)
+F (D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c)(0x5FC05DFA)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103RB-I./RTE/_Target_1-ID:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/gpio_stm32f10x.o -MD)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\RTE_Driver\GPIO_STM32F10x.h)(0x5FC05DFA)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdbool.h)(0x6252A726)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_Target_1\RTE_Components.h)(0x691D39B7)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdint.h)(0x6252A728)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+F (RTE/Device/STM32F103RB/RTE_Device.h)(0x5FC05DFA)()
+F (RTE/Device/STM32F103RB/startup_stm32f10x_md.s)(0x61AD876E)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Device/STM32F103RB-I./RTE/_Target_1-ID:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver-Wa,armasm,--pd,"__UVISION_VERSION SETA 537" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
+F (RTE/Device/STM32F103RB/system_stm32f10x.c)(0x61AD876E)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103RB-I./RTE/_Target_1-ID:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-ID:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-ID:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MD)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (RTE\_Target_1\RTE_Components.h)(0x691D39B7)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626F912E)
+I (D:\Program\Keil\ARM\ARMCLANG\include\stdint.h)(0x6252A728)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (D:\Program\Kail_Pacs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)

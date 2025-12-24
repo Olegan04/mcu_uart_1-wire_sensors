@@ -1,0 +1,590 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Oleg Evseev, TPU, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  D:\Program\Keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+D:\Documents\Keil\Kurs_work\Kurs_work.uvprojx
+Project File Date:  11/19/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'D:\Program\Keil\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/Buttons_NUCLEO_F103RB.c(34): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+1 warning generated.
+compiling Buttons_NUCLEO_F103RB.c...
+diod.c(1): warning: In file included from...
+./diod.h(5): warning: In file included from...
+./ds18b20.h(3): warning: // comments are not allowed in this language [-Wcomment]
+//--------------------------------------------------
+^
+./ds18b20.h(42): warning: no newline at end of file [-Wnewline-eof]
+#endif /* DS18B20_H_ */
+                       ^
+./ds18b20.h(34): warning: padding struct 'Sensor' with 1 byte to align 'raw_temp' [-Wpadded]
+                int16_t raw_temp;                                                                                                               // 16 bit measured temp
+                        ^
+diod.c(1): warning: In file included from...
+./diod.h(25): warning: no newline at end of file [-Wnewline-eof]
+#endif /* DIOD_H_ */
+                    ^
+diod.c(7): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+    for (uint8_t i = 0; i < MAX_SENSORS; ++i) {
+         ^
+diod.c(7): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+diod.c(15): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for (uint8_t j = 0; j < 8; j++) {
+             ^
+diod.c(15): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+diod.c(18): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for (uint8_t q = 0; q < 9; q++) {
+             ^
+diod.c(18): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+diod.c(45): warning: implicit declaration of function 'ds18b20_Reset' [-Wimplicit-function-declaration]
+    ds18b20_Reset();
+    ^
+diod.c(47): warning: implicit declaration of function 'ds18b20_WriteByte' [-Wimplicit-function-declaration]
+    ds18b20_WriteByte(WRITE_SCRATCHPAD);
+    ^
+diod.c(28): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+    uint8_t config_byte;
+            ^
+diod.c(70): warning: implicit declaration of function 'ds18b20_Reset' [-Wimplicit-function-declaration]
+    if (ds18b20_Reset()) {
+        ^
+diod.c(74): warning: implicit declaration of function 'Search_ROM' [-Wimplicit-function-declaration]
+    devCount = Search_ROM(0xF0, sensors);
+               ^
+diod.c(74): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    devCount = Search_ROM(0xF0, sensors);
+             ~ ^~~~~~~~~~~~~~~~~~~~~~~~~
+diod.c(87): warning: // comments are not allowed in this language [-Wcomment]
+                    conversion_delay = 94000;  // 94 ms
+                                               ^
+diod.c(103): warning: implicit declaration of function 'Compute_CRC8' [-Wimplicit-function-declaration]
+            sensors[i].crc8_data = Compute_CRC8(sensors[i].scratchpad_data, 8);
+                                   ^
+diod.c(103): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            sensors[i].crc8_data = Compute_CRC8(sensors[i].scratchpad_data, 8);
+                                 ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+diod.c(107): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
+                sensors[i].raw_temp = ((uint16_t)sensors[i].scratchpad_data[1] << 8) | sensors[i].scratchpad_data[0];
+                                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+diod.c(125): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                                                                sensors[i].temp = sensors[i].raw_temp * 0.0625;
+                                                                                ~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+diod.c(108): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+                                                                 uint16_t mask;
+                                                                          ^
+diod.c(84): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+                                                uint32_t conversion_delay;
+                                                         ^
+diod.c(130): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+24 warnings generated.
+compiling diod.c...
+assembling startup_stm32f10x_md.s...
+ds18b20.c(1): warning: In file included from...
+./ds18b20.h(3): warning: // comments are not allowed in this language [-Wcomment]
+//--------------------------------------------------
+^
+./ds18b20.h(42): warning: no newline at end of file [-Wnewline-eof]
+#endif /* DS18B20_H_ */
+                       ^
+ds18b20.c(7): warning: // comments are not allowed in this language [-Wcomment]
+  RCC->APB2ENR |= RCC_APB2ENR_IOPBEN;   // I/O Port B clock enabled, RCC->APB2ENR |= 1000b, IOPBEN = 1;
+                                        ^
+ds18b20.c(13): warning: no previous prototype for function 'ds18b20_Reset' [-Wmissing-prototypes]
+uint8_t ds18b20_Reset(void)
+        ^
+ds18b20.c(13): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t ds18b20_Reset(void)
+^
+static 
+ds18b20.c(25): warning: no previous prototype for function 'ds18b20_ReadBit' [-Wmissing-prototypes]
+uint8_t ds18b20_ReadBit(void)
+        ^
+ds18b20.c(25): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t ds18b20_ReadBit(void)
+^
+static 
+ds18b20.c(40): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+  for (uint8_t i = 0; i <= 7; i++)
+       ^
+ds18b20.c(40): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+ds18b20.c(37): warning: no previous prototype for function 'ds18b20_ReadByte' [-Wmissing-prototypes]
+uint8_t ds18b20_ReadByte(void)
+        ^
+ds18b20.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t ds18b20_ReadByte(void)
+^
+static 
+ds18b20.c(45): warning: no previous prototype for function 'ds18b20_WriteBit' [-Wmissing-prototypes]
+void ds18b20_WriteBit(uint8_t bit)
+     ^
+ds18b20.c(45): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ds18b20_WriteBit(uint8_t bit)
+^
+static 
+ds18b20.c(55): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+  for (uint8_t i = 0; i < 8; i++)
+       ^
+ds18b20.c(55): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+ds18b20.c(53): warning: no previous prototype for function 'ds18b20_WriteByte' [-Wmissing-prototypes]
+void ds18b20_WriteByte(uint8_t data)
+     ^
+ds18b20.c(53): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ds18b20_WriteByte(uint8_t data)
+^
+static 
+ds18b20.c(76): warning: unused variable 'i' [-Wunused-variable]
+        uint8_t i;
+                ^
+ds18b20.c(77): warning: unused variable 'rom_data' [-Wunused-variable]
+        uint8_t rom_data [8] = {0};
+                ^
+ds18b20.c(89): warning: implicit conversion from 'int' to 'uint8_t' (aka 'unsigned char') changes value from 65438 to 158 [-Wconstant-conversion]
+        ds18b20_WriteByte(0xFF9E);                                                      //send Tl = -30
+        ~~~~~~~~~~~~~~~~~ ^~~~~~
+ds18b20.c(126): warning: no previous prototype for function 'ds18b20_ReadROM' [-Wmissing-prototypes]
+void ds18b20_ReadROM (uint8_t *Data) {
+     ^
+ds18b20.c(126): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ds18b20_ReadROM (uint8_t *Data) {
+^
+static 
+ds18b20.c(136): warning: no previous prototype for function 'Compute_CRC8' [-Wmissing-prototypes]
+uint8_t Compute_CRC8 (uint8_t* data, uint8_t length) {
+        ^
+ds18b20.c(136): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t Compute_CRC8 (uint8_t* data, uint8_t length) {
+^
+static 
+ds18b20.c(171): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+            for (int n=0; n<8; n++) {           // Search ROM command or Search Alarm command
+                 ^
+ds18b20.c(171): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+ds18b20.c(187): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                            DS1820_search_ROM[byte_counter] = DS1820_search_ROM[byte_counter] | bit_mask; // Set ROM bit to one
+                                             ^~~~~~~~~~~~~
+ds18b20.c(187): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                            DS1820_search_ROM[byte_counter] = DS1820_search_ROM[byte_counter] | bit_mask; // Set ROM bit to one
+                                                                               ^~~~~~~~~~~~~
+ds18b20.c(189): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                            DS1820_search_ROM[byte_counter] = DS1820_search_ROM[byte_counter] & ~bit_mask; // Set ROM bit to zero
+                                             ^~~~~~~~~~~~~
+ds18b20.c(189): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                            DS1820_search_ROM[byte_counter] = DS1820_search_ROM[byte_counter] & ~bit_mask; // Set ROM bit to zero
+                                                                               ^~~~~~~~~~~~~
+ds18b20.c(194): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                            DS1820_search_ROM[byte_counter] = DS1820_search_ROM[byte_counter] | bit_mask; // Set ROM bit to one
+                                             ^~~~~~~~~~~~~
+ds18b20.c(194): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                            DS1820_search_ROM[byte_counter] = DS1820_search_ROM[byte_counter] | bit_mask; // Set ROM bit to one
+                                                                               ^~~~~~~~~~~~~
+ds18b20.c(197): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                                DS1820_search_ROM[byte_counter] = DS1820_search_ROM[byte_counter] & ~bit_mask; // Set ROM bit to zero
+                                                 ^~~~~~~~~~~~~
+ds18b20.c(197): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                                DS1820_search_ROM[byte_counter] = DS1820_search_ROM[byte_counter] & ~bit_mask; // Set ROM bit to zero
+                                                                                   ^~~~~~~~~~~~~
+ds18b20.c(200): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                                if (( DS1820_search_ROM[byte_counter] & bit_mask) == 0x00 )
+                                                       ^~~~~~~~~~~~~
+ds18b20.c(205): warning: array subscript is of type 'char' [-Wchar-subscripts]
+                                                                                ds18b20_WriteBit(DS1820_search_ROM[byte_counter] & bit_mask);
+                                                                                                                  ^~~~~~~~~~~~~
+ds18b20.c(211): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                        bit_mask = bit_mask << 1;
+                                 ~ ~~~~~~~~~^~~~
+ds18b20.c(170): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+            char command_shift = command;
+                 ^
+ds18b20.c(160): warning: variable 'return_value' set but not used [-Wunused-but-set-variable]
+    char return_value, Bit_A, Bit_B;
+         ^
+ds18b20.c(153): warning: no previous prototype for function 'Search_ROM' [-Wmissing-prototypes]
+uint8_t Search_ROM(char command, Sensor *sensors) {
+        ^
+ds18b20.c(153): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t Search_ROM(char command, Sensor *sensors) {
+^
+static 
+ds18b20.c(1): warning: In file included from...
+./ds18b20.h(34): warning: padding struct 'Sensor' with 1 byte to align 'raw_temp' [-Wpadded]
+                int16_t raw_temp;                                                                                                               // 16 bit measured temp
+                        ^
+ds18b20.c(3): warning: no previous extern declaration for non-static variable 'onewire_enum_fork_bit' [-Wmissing-variable-declarations]
+uint8_t onewire_enum_fork_bit; 
+        ^
+ds18b20.c(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t onewire_enum_fork_bit; 
+^
+35 warnings generated.
+compiling ds18b20.c...
+RTE/Device/STM32F103RB/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(39): warning: // comments are not allowed in this language [-Wcomment]
+/// GPIO Pin identifier
+^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(173): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+extern void GPIO_PortClock (GPIO_TypeDef *GPIOx, bool enable);
+                                                 ^
+D:\Program\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(182): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+extern bool GPIO_GetPortClockState (GPIO_TypeDef *GPIOx);
+       ^
+D:\Program\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(197): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+bool GPIO_PinConfigure(GPIO_TypeDef      *GPIOx,
+^
+D:\Program\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(246): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  return (GPIOx->IDR);
+  ~~~~~~  ~~~~~~~^~~
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(47): warning: // comments are not allowed in this language [-Wcomment]
+#define AFIO_MAPR_SWJ_CFG_VAL   (AFIO_SWJ_FULL)    // Full SWJ (JTAG-DP + SW-DP)
+                                                   ^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(56): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+void GPIO_PortClock (GPIO_TypeDef *GPIOx, bool enable) {
+                                          ^
+D:\Program\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(84): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+bool GPIO_GetPortClockState (GPIO_TypeDef *GPIOx) {
+^
+D:\Program\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(111): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+bool GPIO_PinConfigure(GPIO_TypeDef *GPIOx, uint32_t num, GPIO_CONF conf,
+^
+D:\Program\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(128): warning: integer constant not in range of enumerated type 'GPIO_CONF' [-Wassign-enum]
+      conf &= ~1;
+              ^
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg &= ~(0xF << (num << 2));
+       ~~ ^~~~~~~~~~~~~~~~~~~~
+D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(141): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg |= ((conf << 2) | mode) << (num << 2);
+       ~~ ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+12 warnings generated.
+compiling GPIO_STM32F10x.c...
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(34): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(39): warning: no previous extern declaration for non-static variable 'led_mask' [-Wmissing-variable-declarations]
+const unsigned long led_mask[] = {1ul << 5};
+                    ^
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(39): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned long led_mask[] = {1ul << 5};
+      ^
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(121): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      LED_On (i);
+      ~~~~~~  ^
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(123): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      LED_Off(i);
+      ~~~~~~~ ^
+4 warnings generated.
+compiling LED_NUCLEO_F103RB.c...
+main.c(2): warning: In file included from...
+./diod.h(5): warning: In file included from...
+./ds18b20.h(3): warning: // comments are not allowed in this language [-Wcomment]
+//--------------------------------------------------
+^
+./ds18b20.h(42): warning: no newline at end of file [-Wnewline-eof]
+#endif /* DS18B20_H_ */
+                       ^
+./ds18b20.h(34): warning: padding struct 'Sensor' with 1 byte to align 'raw_temp' [-Wpadded]
+                int16_t raw_temp;                                                                                                               // 16 bit measured temp
+                        ^
+main.c(2): warning: In file included from...
+./diod.h(25): warning: no newline at end of file [-Wnewline-eof]
+#endif /* DIOD_H_ */
+                    ^
+main.c(8): warning: no previous extern declaration for non-static variable 'temperature_update_flag' [-Wmissing-variable-declarations]
+volatile uint32_t temperature_update_flag = 1;
+                  ^
+main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t temperature_update_flag = 1;
+         ^
+main.c(9): warning: no previous extern declaration for non-static variable 'temperature_output_flag' [-Wmissing-variable-declarations]
+volatile uint32_t temperature_output_flag = 1;
+                  ^
+main.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t temperature_output_flag = 1;
+         ^
+main.c(10): warning: no previous extern declaration for non-static variable 'micros_ticks' [-Wmissing-variable-declarations]
+volatile uint32_t micros_ticks = 0;
+                  ^
+main.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t micros_ticks = 0;
+         ^
+main.c(11): warning: no previous extern declaration for non-static variable 'delay_micros_target' [-Wmissing-variable-declarations]
+volatile uint32_t delay_micros_target = 0;
+                  ^
+main.c(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t delay_micros_target = 0;
+         ^
+main.c(12): warning: no previous extern declaration for non-static variable 'delay_micros_active' [-Wmissing-variable-declarations]
+volatile uint32_t delay_micros_active = 0;
+                  ^
+main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t delay_micros_active = 0;
+         ^
+main.c(15): warning: no previous extern declaration for non-static variable 'usart_rx_index' [-Wmissing-variable-declarations]
+volatile uint8_t usart_rx_index = 0;
+                 ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint8_t usart_rx_index = 0;
+         ^
+main.c(16): warning: no previous extern declaration for non-static variable 'usart_command_ready' [-Wmissing-variable-declarations]
+volatile uint8_t usart_command_ready = 0;
+                 ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint8_t usart_command_ready = 0;
+         ^
+main.c(18): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void) {
+     ^
+main.c(18): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void) {
+^
+static 
+main.c(42): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+void TIM2_IRQHandler(void) {
+     ^
+main.c(42): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_IRQHandler(void) {
+^
+static 
+main.c(52): warning: no previous prototype for function 'Timer_Init' [-Wmissing-prototypes]
+void Timer_Init(void) {
+     ^
+main.c(52): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Timer_Init(void) {
+^
+static 
+main.c(72): warning: // comments are not allowed in this language [-Wcomment]
+    RCC->CFGR = RCC_CFGR_HPRE_DIV1;                          // HCLK = SYSCLK
+                                                             ^
+main.c(65): warning: no previous prototype for function 'SystemCoreClockConfigure' [-Wmissing-prototypes]
+void SystemCoreClockConfigure(void) {
+     ^
+main.c(65): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SystemCoreClockConfigure(void) {
+^
+static 
+main.c(90): warning: no previous prototype for function 'USART_Init' [-Wmissing-prototypes]
+void USART_Init () {
+     ^
+main.c(90): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART_Init () {
+^
+static 
+main.c(90): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void USART_Init () {
+                ^
+main.c(117): warning: no previous prototype for function 'USART_Send' [-Wmissing-prototypes]
+void USART_Send (unsigned char symbol) {
+     ^
+main.c(117): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART_Send (unsigned char symbol) {
+^
+static 
+main.c(122): warning: no previous prototype for function 'USART_Receive' [-Wmissing-prototypes]
+void USART_Receive (unsigned char *data) {
+     ^
+main.c(122): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART_Receive (unsigned char *data) {
+^
+static 
+main.c(127): warning: no previous prototype for function 'USART_SendString' [-Wmissing-prototypes]
+void USART_SendString(char *str) {
+     ^
+main.c(127): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART_SendString(char *str) {
+^
+static 
+main.c(135): warning: no previous prototype for function 'USART_SendFloat' [-Wmissing-prototypes]
+void USART_SendFloat(float value) {
+     ^
+main.c(135): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART_SendFloat(float value) {
+^
+static 
+main.c(159): warning: no previous prototype for function 'USART_SendUint8' [-Wmissing-prototypes]
+void USART_SendUint8(uint8_t value) {
+     ^
+main.c(159): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART_SendUint8(uint8_t value) {
+^
+static 
+main.c(173): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+    for (int i = 0; i < MAX_SENSORS; i++) {
+         ^
+main.c(173): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(169): warning: no previous prototype for function 'SendTemperatureData' [-Wmissing-prototypes]
+void SendTemperatureData(void) {
+     ^
+main.c(169): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SendTemperatureData(void) {
+^
+static 
+main.c(196): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
+void USART2_IRQHandler(void) {
+     ^
+main.c(196): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART2_IRQHandler(void) {
+^
+static 
+main.c(223): warning: no previous prototype for function 'ChangeSensorResolution' [-Wmissing-prototypes]
+void ChangeSensorResolution(uint8_t sensor_index, uint8_t sensor_bit_depth) {
+     ^
+main.c(223): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ChangeSensorResolution(uint8_t sensor_index, uint8_t sensor_bit_depth) {
+^
+static 
+main.c(234): warning: no previous prototype for function 'ProcessCommand' [-Wmissing-prototypes]
+void ProcessCommand(uint8_t* command) {
+     ^
+main.c(234): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ProcessCommand(uint8_t* command) {
+^
+static 
+main.c(266): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+    uint8_t config_byte = sensors[sensor_index].scratchpad_data[4];
+            ^
+main.c(310): warning: cast from 'volatile unsigned char *' to 'unsigned char *' drops volatile qualifier [-Wcast-qual]
+                                                ProcessCommand((uint8_t*)usart_rx_buffer);
+                                                                         ^
+main.c(315): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(314): warning: 'return' will never be executed [-Wunreachable-code-return]
+    return 0;
+           ^
+main.c(7): warning: no previous extern declaration for non-static variable 'msTicks' [-Wmissing-variable-declarations]
+volatile uint32_t msTicks; 
+                  ^
+main.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t msTicks; 
+         ^
+main.c(14): warning: no previous extern declaration for non-static variable 'usart_rx_buffer' [-Wmissing-variable-declarations]
+volatile uint8_t usart_rx_buffer[COMMAND_BUFFER_SIZE];
+                 ^
+main.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint8_t usart_rx_buffer[COMMAND_BUFFER_SIZE];
+         ^
+35 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=8602 RO-data=342 RW-data=12 ZI-data=1760  
+".\Objects\Kurs_work.axf" - 0 Error(s), 112 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.MDK-Middleware.7.15.0.pack
+                Keil.MDK-Middleware.7.15.0
+                Middleware for Keil MDK-Professional and MDK-Plus
+   * Component: Buttons Version: 1.0.0
+   * Component: LED Version: 1.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32NUCLEO_BSP.1.8.1.pack
+                Keil.STM32NUCLEO_BSP.1.8.1
+                STMicroelectronics Nucleo Boards Support and Examples
+   * Component: Buttons Version: 1.0.0
+   * Component: LED Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103RB
+  ./RTE/_Target_1
+  D:/Program/Kail_Pacs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/Program/Kail_Pacs/Keil/MDK-Middleware/7.15.0/Board
+  D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Board Support:Buttons:1.0.0 (API)
+      Include file:  Board/Board_Buttons.h
+
+   * Component: ::Board Support:LED:1.0.0 (API)
+      Include file:  Board/Board_LED.h
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil.NUCLEO-F103RB::Board Support:Buttons:1.0.0
+      Source file:   Boards/ST/NUCLEO-F103RB/Common/Buttons_NUCLEO_F103RB.c
+
+   * Component: Keil.NUCLEO-F103RB::Board Support:LED:1.0.0
+      Source file:   Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c
+
+   * Component: Keil::Device:GPIO:1.3
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
