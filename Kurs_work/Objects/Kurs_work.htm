@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Kurs_work.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Kurs_work.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Fri Dec 19 18:50:32 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Thu Dec 25 23:48:19 2025
 <BR><P>
 <H3>Maximum Stack Usage =        152 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -602,12 +602,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChangeSensorResolution
 <LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendTemperatureData
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendUint8
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendFloat
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendUint8
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendString
 </UL>
 
-<P><STRONG><a name="[56]"></a>USART_SendFloat</STRONG> (Thumb, 428 bytes, Stack size 32 bytes, main.o(.text.USART_SendFloat))
+<P><STRONG><a name="[56]"></a>USART_SendFloat</STRONG> (Thumb, 288 bytes, Stack size 32 bytes, main.o(.text.USART_SendFloat))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = USART_SendFloat &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
@@ -617,6 +617,7 @@ Global Symbols
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendUint8
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendTemperatureData
@@ -638,6 +639,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChangeSensorResolution
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendFloat
 </UL>
 
 <P><STRONG><a name="[66]"></a>diod</STRONG> (Thumb, 674 bytes, Stack size 40 bytes, diod.o(.text.diod))

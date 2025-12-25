@@ -21,17 +21,12 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
 Dialog DLL:      TCM.DLL V1.56.1.0
  
 <h2>Project:</h2>
-D:\Documents\Keil\Kurs_work\Kurs_work.uvprojx
+D:\Documents\Keil\mcu_uart_1-wire\Kurs_work\Kurs_work.uvprojx
 Project File Date:  11/19/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.18', folder: 'D:\Program\Keil\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
-D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/Buttons_NUCLEO_F103RB.c(34): warning: // comments are not allowed in this language [-Wcomment]
-#include "stm32f10x.h"                  // Device header
-                                        ^
-1 warning generated.
-compiling Buttons_NUCLEO_F103RB.c...
 diod.c(1): warning: In file included from...
 ./diod.h(5): warning: In file included from...
 ./ds18b20.h(3): warning: // comments are not allowed in this language [-Wcomment]
@@ -103,7 +98,28 @@ diod.c(130): warning: no newline at end of file [-Wnewline-eof]
  ^
 24 warnings generated.
 compiling diod.c...
-assembling startup_stm32f10x_md.s...
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/Buttons_NUCLEO_F103RB.c(34): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+1 warning generated.
+compiling Buttons_NUCLEO_F103RB.c...
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(34): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(39): warning: no previous extern declaration for non-static variable 'led_mask' [-Wmissing-variable-declarations]
+const unsigned long led_mask[] = {1ul << 5};
+                    ^
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(39): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned long led_mask[] = {1ul << 5};
+      ^
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(121): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      LED_On (i);
+      ~~~~~~  ^
+D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(123): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      LED_Off(i);
+      ~~~~~~~ ^
+4 warnings generated.
+compiling LED_NUCLEO_F103RB.c...
 ds18b20.c(1): warning: In file included from...
 ./ds18b20.h(3): warning: // comments are not allowed in this language [-Wcomment]
 //--------------------------------------------------
@@ -242,14 +258,6 @@ uint8_t onewire_enum_fork_bit;
 ^
 35 warnings generated.
 compiling ds18b20.c...
-RTE/Device/STM32F103RB/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-            ^
-RTE/Device/STM32F103RB/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-    ^
-1 warning generated.
-compiling system_stm32f10x.c...
 D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
 D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(39): warning: // comments are not allowed in this language [-Wcomment]
 /// GPIO Pin identifier
@@ -310,23 +318,7 @@ D:/Program/Kail_Pacs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(141): 
        ~~ ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
 12 warnings generated.
 compiling GPIO_STM32F10x.c...
-D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(34): warning: // comments are not allowed in this language [-Wcomment]
-#include "stm32f10x.h"                  // Device header
-                                        ^
-D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(39): warning: no previous extern declaration for non-static variable 'led_mask' [-Wmissing-variable-declarations]
-const unsigned long led_mask[] = {1ul << 5};
-                    ^
-D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(39): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-const unsigned long led_mask[] = {1ul << 5};
-      ^
-D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(121): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      LED_On (i);
-      ~~~~~~  ^
-D:/Program/Kail_Pacs/Keil/STM32NUCLEO_BSP/1.8.1/Boards/ST/NUCLEO-F103RB/Common/LED_NUCLEO_F103RB.c(123): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      LED_Off(i);
-      ~~~~~~~ ^
-4 warnings generated.
-compiling LED_NUCLEO_F103RB.c...
+assembling startup_stm32f10x_md.s...
 main.c(2): warning: In file included from...
 ./diod.h(5): warning: In file included from...
 ./ds18b20.h(3): warning: // comments are not allowed in this language [-Wcomment]
@@ -446,62 +438,62 @@ main.c(127): note: declare 'static' if the function is not intended to be used o
 void USART_SendString(char *str) {
 ^
 static 
-main.c(135): warning: no previous prototype for function 'USART_SendFloat' [-Wmissing-prototypes]
-void USART_SendFloat(float value) {
+main.c(135): warning: no previous prototype for function 'USART_SendUint8' [-Wmissing-prototypes]
+void USART_SendUint8(uint8_t value) {
      ^
 main.c(135): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART_SendUint8(uint8_t value) {
+^
+static 
+main.c(145): warning: no previous prototype for function 'USART_SendFloat' [-Wmissing-prototypes]
+void USART_SendFloat(float value) {
+     ^
+main.c(145): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void USART_SendFloat(float value) {
 ^
 static 
-main.c(159): warning: no previous prototype for function 'USART_SendUint8' [-Wmissing-prototypes]
-void USART_SendUint8(uint8_t value) {
-     ^
-main.c(159): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void USART_SendUint8(uint8_t value) {
-^
-static 
-main.c(173): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+main.c(167): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
     for (int i = 0; i < MAX_SENSORS; i++) {
          ^
-main.c(173): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
-main.c(169): warning: no previous prototype for function 'SendTemperatureData' [-Wmissing-prototypes]
+main.c(167): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(163): warning: no previous prototype for function 'SendTemperatureData' [-Wmissing-prototypes]
 void SendTemperatureData(void) {
      ^
-main.c(169): note: declare 'static' if the function is not intended to be used outside of this translation unit
+main.c(163): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void SendTemperatureData(void) {
 ^
 static 
-main.c(196): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
+main.c(190): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
 void USART2_IRQHandler(void) {
      ^
-main.c(196): note: declare 'static' if the function is not intended to be used outside of this translation unit
+main.c(190): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void USART2_IRQHandler(void) {
 ^
 static 
-main.c(223): warning: no previous prototype for function 'ChangeSensorResolution' [-Wmissing-prototypes]
+main.c(217): warning: no previous prototype for function 'ChangeSensorResolution' [-Wmissing-prototypes]
 void ChangeSensorResolution(uint8_t sensor_index, uint8_t sensor_bit_depth) {
      ^
-main.c(223): note: declare 'static' if the function is not intended to be used outside of this translation unit
+main.c(217): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void ChangeSensorResolution(uint8_t sensor_index, uint8_t sensor_bit_depth) {
 ^
 static 
-main.c(234): warning: no previous prototype for function 'ProcessCommand' [-Wmissing-prototypes]
+main.c(228): warning: no previous prototype for function 'ProcessCommand' [-Wmissing-prototypes]
 void ProcessCommand(uint8_t* command) {
      ^
-main.c(234): note: declare 'static' if the function is not intended to be used outside of this translation unit
+main.c(228): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void ProcessCommand(uint8_t* command) {
 ^
 static 
-main.c(266): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+main.c(260): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
     uint8_t config_byte = sensors[sensor_index].scratchpad_data[4];
             ^
-main.c(310): warning: cast from 'volatile unsigned char *' to 'unsigned char *' drops volatile qualifier [-Wcast-qual]
+main.c(304): warning: cast from 'volatile unsigned char *' to 'unsigned char *' drops volatile qualifier [-Wcast-qual]
                                                 ProcessCommand((uint8_t*)usart_rx_buffer);
                                                                          ^
-main.c(315): warning: no newline at end of file [-Wnewline-eof]
+main.c(309): warning: no newline at end of file [-Wnewline-eof]
 }
  ^
-main.c(314): warning: 'return' will never be executed [-Wunreachable-code-return]
+main.c(308): warning: 'return' will never be executed [-Wunreachable-code-return]
     return 0;
            ^
 main.c(7): warning: no previous extern declaration for non-static variable 'msTicks' [-Wmissing-variable-declarations]
@@ -518,8 +510,16 @@ volatile uint8_t usart_rx_buffer[COMMAND_BUFFER_SIZE];
          ^
 35 warnings generated.
 compiling main.c...
+RTE/Device/STM32F103RB/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103RB/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
 linking...
-Program Size: Code=8602 RO-data=342 RW-data=12 ZI-data=1760  
+Program Size: Code=8462 RO-data=342 RW-data=12 ZI-data=1760  
 ".\Objects\Kurs_work.axf" - 0 Error(s), 112 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -580,11 +580,11 @@ Package Vendor: Keil
       Source file:   RTE_Driver/GPIO_STM32F10x.c
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
       Source file:   Device/Source/system_stm32f10x.c
       Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
       Source file:   Device/Source/ARM/STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:05
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

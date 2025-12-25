@@ -151,7 +151,7 @@ void USART_SendFloat(float value) {
         integer_part = -integer_part;
     }
     
-    USART_SendUnit8((uint8_t)value);
+    USART_SendUint8((uint8_t)value);
     
     USART_Send('.');
 		USART_Send((char)(48 + (decimal_part / 1000) % 10));
